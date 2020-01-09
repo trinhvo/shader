@@ -6,8 +6,6 @@ GLuint Quadtree::heightmapProgram;
 GLuint Quadtree::normalmapProgram;
 GLuint Quadtree::colormapProgram;
 
-
-
 Quadtree::Quadtree(GLfloat a1, GLfloat b1, GLfloat a2, GLfloat b2, GLuint level) {
   const GLfloat L = (a2 - a1) / CHUNK_SIZE;
   GLuint pbo; // Pixel buffer object for vertexmap.

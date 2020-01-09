@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Quaddtree" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release_Win">
+				<Option output="bin/Quaddtree" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option use_console_runner="0" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-static" />
+					<Add option="-static-libgcc" />
+					<Add directory="Vendor/include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="mingw32" />
+					<Add library="Vendor/lib/libglew32.a" />
+					<Add library="Vendor/lib/libSDLmain.a" />
+					<Add library="Vendor/lib/libSDL.dll.a" />
+					<Add library="Vendor/lib/libopengl32.a" />
+					<Add library="Vendor/lib/libgdi32.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-DGLEW_STATIC" />
+		</Compiler>
+		<Unit filename="src/camera.hpp" />
+		<Unit filename="src/game.cpp" />
+		<Unit filename="src/game.hpp" />
+		<Unit filename="src/light.hpp" />
+		<Unit filename="src/lwcppgl/display.cpp" />
+		<Unit filename="src/lwcppgl/display.hpp" />
+		<Unit filename="src/lwcppgl/keyboard.cpp" />
+		<Unit filename="src/lwcppgl/keyboard.hpp" />
+		<Unit filename="src/main.cpp" />
+		<Unit filename="src/main.hpp" />
+		<Unit filename="src/quadtree.cpp" />
+		<Unit filename="src/quadtree.hpp" />
+		<Unit filename="src/vertex.hpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
