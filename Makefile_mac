@@ -1,0 +1,16 @@
+PROJECT = shader
+IN      = src/*.cpp src/**/*.cpp
+OUT     = bin/$(PROJECT)
+
+CC      = g++
+CFLAGS  = -O2 -ansi -pedantic -g -Wall -Wdeprecated-declarations
+# LFLAGS  = -lGL -lGLU -lSDL
+LFLAGS = -framework GLUT -framework OpenGL -framework Cocoa -lSDLmain -lSDL
+
+INC = -I/usr/local/include -Ivendor/glm -Ivendor -I/System/Library/Frameworks
+
+all: $(PROJECT)
+
+$(PROJECT): $(IN)
+	$(CC) $(CFLAGS) -DGL_SILENCE_DEPRECATION=1 $(IN) $(INC) -o "$(OUT)" $(LFLAGS)
+

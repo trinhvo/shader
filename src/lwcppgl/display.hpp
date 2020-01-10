@@ -4,8 +4,16 @@
 #include <cstdio>
 #include <cstdlib>
 
-#include <GL/glew.h>
+#if defined(__APPLE__)
+#include <OpenGL/glu.h>
+#else
+#include <GL/gl.h>
+#endif
+
 #include <SDL/SDL.h>
+#include <SDL/SDL_opengl.h>
+
+#include <GL/glext.h>
 
 #include "keyboard.hpp"
 

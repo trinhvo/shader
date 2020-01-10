@@ -1,7 +1,9 @@
 *.swp
-bin/shader
 obj/
 *.exe
+
+[Bb]uild/
+[Bb]in/
 
 .DS_Store
 [Tt]arget
